@@ -3,29 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <title>Yuvindu | Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="CSS/styles.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- ================= NAVBAR ================= -->
     <nav>
         <h2>Yuvindu Wickramaarachchi</h2>
+
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+
+        <button id="themeToggle">🌙</button>
     </nav>
 
+    <!-- ================= HERO ================= -->
     <section class="hero">
-        <h1>Hello, I’m Yuvindu</h1>
-        <p>Student | Developer | Musician</p>
+        <h1>Hi, I'm <span>Yuvindu</span></h1>
+        <p>Developer • Musician • Creator</p>
+        <a href="#projects" class="btn">View My Work</a>
     </section>
 
-    <section class="intro">
-        <p><B>Email: <a href="yuvindu000@gmail.com">Yuvindu000@gmail.com</a></B></p>
-        <p><B>GitHub: <a href="https://github.com/yuvinduyy">github.com/yuvinduyy</a></B></p>
-        <p><B>LinkedIn: <a href="linkedin.com/in/yourname">linkedin.com/in/yourname</a></B></p>
-    </section>  
+    <!-- ================= SKILLS ================= -->
+    <section class="section reveal">
+        <h3>Skills</h3>
+
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Java</div>
+            <div class="skill">PHP</div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+        <h3>Projects</h3>
+
+        <div class="projects-grid">
+
+            <div class="project reveal">
+                <h4>ELIX Band Website</h4>
+                <p>
+                    A responsive band website developed using HTML, CSS, JavaScript and PHP,
+                    featuring chord downloads, reviews and merchandise.
+                </p>
+            </div>
+
+            <div class="project reveal">
+                <h4>Pharmacy POS System</h4>
+                <p>
+                    A Java-based Pharmacy Point of Sale system for managing medicines,
+                    billing and inventory using OOP principles.
+                </p>
+            </div>
+
+            <div class="project reveal">
+                <h4>Pulse Pro – Fitness Application</h4>
+                <p>
+                    A fitness tracking application designed to monitor workouts,
+                    health metrics and user goals with an interactive UI.
+                </p>
+            </div>
+
+            <div class="project reveal">
+                <h4>Flare – Dating Application</h4>
+                <p>
+                    A modern dating application with matchmaking, messaging and
+                    interactive gaming features, designed using proper software architecture.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-content">
+            <h4>Yuvindu Wickramaarachchi</h4>
+            <p>Developer • Musician • Creator</p>
+
+            <div class="social-links">
+                <a href="https://github.com/yuvinduyy" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourname" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:yuvindu000@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <p class="copyright">
+                © 2026 Yuvindu Wickramaarachchi. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ================= JS ================= -->
+    <script src="js/script.js"></script>
+
 </body>
 </html>

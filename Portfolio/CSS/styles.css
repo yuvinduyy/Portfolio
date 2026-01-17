@@ -1,29 +1,32 @@
+/* =========================
+   GLOBAL RESET
+========================= */ 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
 }
 
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-}
+/* =========================
+   NAVBAR
+========================= */
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+    padding: 20px 40px;
     background: #111;
     color: white;
 }
@@ -34,26 +37,246 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* =========================
+   HERO
+========================= */
 .hero {
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-
-.intro {
-    padding: 40px;
     text-align: center;
-    font-family: Arial, sans-serif;
-
 }
+
+.hero span {
+    color: #007bff;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill {
+    padding: 10px 22px;
+    background: #e9ecef;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #007bff;
+    color: white;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.project {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #111;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content h4 {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin: 15px 0;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+.dark {
+    background-color: #121212;
+    color: white;
+}
+
+.dark nav,
+.dark footer {
+    background: black;
+}
+
+.dark .project {
+    background: #1e1e1e;
+}
+
+/*  =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: auto;
+        padding: 80px 20px;
+    }
+}
+
+
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #222;
+    transition: 0.3s ease;
+}
+
+.contact-card i {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.contact-card h4 {
+    margin-bottom: 8px;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/ Dark Mode Support */
+.dark .contact-card {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark .contact-card i {
+    color: #4dabf7
