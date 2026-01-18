@@ -204,9 +204,16 @@ nav ul li a:hover {
 
 
 /* Visible by default */
+/* Scroll reveal animation */
 .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
 }
 
 /*  Animate only when JS adds .active */

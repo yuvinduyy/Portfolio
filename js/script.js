@@ -1,14 +1,22 @@
-window.addEventListener("scroll", () => {
-    document.querySelectorAll(".reveal").forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const screenHeight = window.innerHeight;
+document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll(".reveal");
 
-        if (position < screenHeight - 100) {
-            el.classList.add("active");
-        }
-    });
+    function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+
+        reveals.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 100;
+
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add("active");
+            }
+        });
+    }
+
+    // 🔥 CRITICAL FIX: Run once on page load
+    revealOnScroll();
+
+    // Then run on scroll
+    window.addEventListener("scroll", revealOnScroll);
 });
-
-document.getElementById("themeToggle").onclick = () => {
-    document.body.classList.toggle("dark");
-};
